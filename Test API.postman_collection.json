@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "b20e3b2c-bfa1-492e-b342-f4781a62c486",
+		"name": "Test API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20734165"
+	},
+	"item": [
+		{
+			"name": "Create New User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "626a577a8324795ebccf163e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\": \"ms\",\r\n\"firstName\": \"Anna\",\r\n\"lastName\": \"Bulba\",\r\n\"gender\": \"female\",\r\n\"email\": \"anna_bulba@mail.ru\",\r\n\"dateOfBirth\": \"11/1/1992\",\r\n\"phone\": \"89999999999\",\r\n\"picture\": \"http://foto.com\",\r\n\"location\": \r\n    {\r\n        \"street\": \"Lenina\",\r\n        \"city\": \"Msc\",\r\n        \"state\": \"Msc\",\r\n        \"country\": \"Russia\",\r\n        \"timezone\": \"+4:00\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "626a577a8324795ebccf163e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/6298a5196e484016cfc0b9f6",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"6298a5196e484016cfc0b9f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  10 Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "626a577a8324795ebccf163e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user?page=1&limit=10",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Upate User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "626a577a8324795ebccf163e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"phone\": \"80000000000\",\r\n\"picture\": \"http://fotochka.com\",\r\n\"location\": \r\n    {\r\n        \"street\": \"Krasnaya\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/6298a5196e484016cfc0b9f6",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"6298a5196e484016cfc0b9f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "626a577a8324795ebccf163e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/6298a5196e484016cfc0b9f6",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"6298a5196e484016cfc0b9f6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
